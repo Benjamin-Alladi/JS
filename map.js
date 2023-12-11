@@ -1,27 +1,20 @@
-let a=[1,2,3,10,12,16,100];
-
-let m= a.map(
-    function(value,index,a)
-    {
-        return ` ${value}:${value**2} `;
-    }
-);
-
-console.log("m:\n"+ m);
-
-// Arrow Function:
-
-let ma= a.map( (v,i,a) => v**2 );
-console.log("ma:\n"+ ma);
-
-let mpa= a.map( 
-    function(v,i,a)
-    {
-        return { v: v*v};
-    }
-);
-console.log("mpa:\n");
-for( let x of mpa)
+function func(a)
 {
-    console.log(x);
-};
+    let r=[];
+    for(let i=0;i<a.length;i++)
+    {
+        r.push(a[i]*a[i]);
+    }
+
+    return r;
+}
+
+let res= func([1,2,3,4,5]);
+console.log("Result: "+ res);
+
+let a=[1,2,3,4,5];
+let result= a.map(function(v,i,a){ return v*v;});
+console.log("Result using Map: "+ result);
+
+let mp= a.map( (v,i,a)=> `${v}:${v*v}`);
+console.log("Squaring using Map: "+ mp);

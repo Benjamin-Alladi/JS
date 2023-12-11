@@ -1,17 +1,32 @@
-let ages=[18,17,26,16,35,100];
 
-let voters= ages.filter(
-    function(value,index,ages)
+function func(a)
+{
+    let res=[];
+    for(let i=0;i<a.length;i++)
     {
-        // return index%2==0;
-        // return index%2==1;
-        return value>=18;
+        if(a[i]>=18)
+        {
+            res.push(a[i]);
+        }
     }
-);
+    console.log("Result: "+res);
+}
 
-console.log(voters);
+func([18,25,12,16]);
 
-// Arrow Function:
-let v= ages.filter((v,i,a) => v>=18);
 
-console.log(v);
+let a=[12,16,18,20,25];
+
+/*
+a.filter(
+ function(value,index,a)
+{
+    console.log(value,index,a);
+});
+*/
+
+let sol= a.filter( function f(value,index,a){ return a[index]>=18;});
+console.log("Solution: "+ sol);
+
+let r= a.filter((x)=> {return x>=18;});
+console.log("Result: "+r);
