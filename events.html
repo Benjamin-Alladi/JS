@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2>
+
+<h2 class="h">Click on this text!</h2>
+
+<!-- Using HTML event attribut. -->
+<button id="fbn" onclick="bg()">Click Me for Red</button>
+
+<button id="sbtn">Click Me for Orange</button>
+
+<button onclick=" document.body.style.backgroundColor='green';">Body</button>
+<br> <br>
+
+<label for="inp">Full Name:</label>  
+<input type="text" id="inp" placeholder="Enter your name" oninput="inp(this)"> <br> <br>
+
+<label for="inp">Text:</label>  
+<input type="text" id="inp" placeholder="Enter some text" onfocus="this.style.backgroundColor='aqua'" onchange="toupper(this)"> <br> <br>
+
+<div style="background-color:aqua; width:150px; height:150px; border: 3px solid black; display: flex; justify-content:center; align-items: center;"
+onmouseover=msover(this)  onmouseout="msout(this)" onmousedown="msdown(this)" onmouseup="msup(this)">
+    Hello
+</div>
+<br> <br> <br>
+
+<button id="tbtn">Click Me</button>
+
+<script>
+
+// Using HTML DOM for events:
+let e= document.getElementById("sbtn");
+e.onclick= bgc;
+
+function bg()
+{
+    document.body.style.backgroundColor="red";
+}
+
+function bgc()
+{
+    document.body.style.backgroundColor="orange";
+}
+
+function inp(ele)
+{
+    ele.value= ele.value.toUpperCase();
+}
+
+function toupper(ele)
+{
+    ele.value= ele.value.toUpperCase();
+}
+
+function msover(e)
+{
+    e.style.backgroundColor="green";
+    e.innerHTML="Mouse out now for Red bg";
+}
+function msout(e)
+{
+    e.style.backgroundColor="red";
+    e.innerHTML="Mouse over now for Green bg";
+}
+function msdown(e)
+{
+    e.style.backgroundColor="orange";
+    e.innerHTML="Mouse is Down now";
+}
+function msup(e)
+{
+    e.style.backgroundColor="blue";
+    e.innerHTML="Mouse is Up now";
+}
+
+let et= document.getElementById("tbtn");
+et.addEventListener("click",tfunc);
+et.addEventListener("click",bgf);
+function tfunc(e)
+{
+    e.target.style.cssText= " transform: scale(1.5) rotate(90deg); background-color:aqua;" ;
+
+    console.log(e);
+    console.log(e.target);
+    console.log(e.target.nodeName);
+    
+}
+function bgf(e)
+{
+    document.body.style.backgroundColor="magenta";
+}
+et.removeEventListener("click", tfunc);
+et.removeEventListener("click", bgf);
+
+</script>
+</body>
+</html>

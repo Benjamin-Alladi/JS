@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="border:2px solid black;">
+    <button id="btn">Button</button>  <br><br>
+    <button id="btns">Button</button>  <br><br>
+
+
+    <input type="checkbox" name="" id="cbox" onclick="cbfunc()">
+    <label for="cbox">Check the box.</label> 
+
+    <script>
+        let ele= document.getElementById("btn");
+        ele.addEventListener("click", function(){ document.body.style.backgroundColor="red";})
+
+        let element= document.getElementById("btns");
+        element.addEventListener("dblclick", bgc);
+
+        function bgc()
+        {
+            document.body.style.backgroundColor="green";
+            console.log("Green Button");
+        }
+
+        document.body.onclick=f;
+        function f()
+        {
+            console.log('clicked');
+        }
+
+        function cbfunc()
+        {
+            let ele= document.getElementById("cbox");
+            console.log("Element: "+ele, event.target+" "+ event.target.nodeName+" "+ event.target.nodeValue+" "+ event.type);
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

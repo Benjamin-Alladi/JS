@@ -1,0 +1,7 @@
+JavaScript has a runtime model based on an event loop, which is responsible for executing the async code, collecting and processing events, 
+and executing queued sub-tasks.
+
+call stack -> async code(setTimeout,setInterval,eventListeners,async functions) -> Web API -> callback queue(Task Queue) or MicroTask Queue(only for fetch oprations) -> If call stack is empty
+-> call stack -> execute.
+
+* First, all the tasks of the MicroTask Queue are executed and then the tasks of Queue are executed.
