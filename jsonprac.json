@@ -1,0 +1,12 @@
+
+{  
+    "name": "John",
+    "married": true,
+    "city": null,
+    "age": 25,
+    "Company": "Google",
+
+    "obj": {"salary":10000, "experience":"5 years", "arr":[1,2,3,4,5], "nestedobj":{ "color": "red"}},
+
+    "arr": [1,10,100]
+}
