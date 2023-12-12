@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <h1>JSON</h1>
+
+    <script>
+
+        // This JSON object is copied from jsonprac.json file.
+        let obj= {  
+    "name": "John",
+    "married": true,
+    "city": null,
+    "age": 25,
+    "Company": "Google",
+
+    "ob": {"salary":10000, "experience":"5 years", "arr":[1,2,3,4,5], "nestedob":{ "color": "red", background:"green"}},
+
+    "arr": [1,10,100]
+    };
+
+    console.log(obj+" "+typeof obj);
+
+    console.log(obj.name+" "+obj["name"]);
+    obj.country= "USA";
+    console.log(JSON.stringify(obj));
+
+    console.log(obj.ob+" "+typeof obj.ob);
+    console.log(obj.ob.salary+" "+ typeof obj.ob.salary);
+    console.log(obj.ob.experience+" "+ typeof obj.ob.experience);
+    console.log(obj.ob.arr);
+    console.log(obj.ob.arr[4]);
+
+    console.log(JSON.stringify(obj.ob.nestedob)+" "+ typeof obj.ob.nestedob);
+    console.log(obj.ob.nestedob.color);
+    console.log(obj.ob.nestedob.background);
+
+    obj.ob.type= "remote";
+    console.log(JSON.stringify(obj.ob));
+
+    obj.ob.nestedob.padding= "1rem";
+    obj.ob.nestedob.margin= "2rem";
+
+    console.log(obj.ob.nestedob);
+
+
+    </script>
+</body>
+</html>
