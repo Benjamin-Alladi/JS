@@ -34,7 +34,7 @@ let m= a.reduce(
 
             return v;  //This returned value is stored in acc.
         }
-    }
+    },Number.MIN_SAFE_INTEGER
 )
 console.log("Max: "+ m);
 
