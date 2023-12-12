@@ -21,3 +21,23 @@ function f(accumulator,v,i,a)
 },0
 )
 console.log("Sum using reduce: "+ res);
+
+
+
+let m= a.reduce(
+    function f(acc,v,i,a)
+    {
+        if(v>acc)
+        {
+            // acc=v;
+            // return acc;
+
+            return v;  //This returned value is stored in acc.
+        }
+    }
+)
+console.log("Max: "+ m);
+
+
+let max= a.reduce((acc,v,i,a)=> { if(v>acc){ return v};}, Number.MIN_SAFE_INTEGER)
+console.log("Max: "+ max);
