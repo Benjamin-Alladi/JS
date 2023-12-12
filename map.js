@@ -18,3 +18,6 @@ console.log("Result using Map: "+ result);
 
 let mp= a.map( (v,i,a)=> `${v}:${v*v}`);
 console.log("Squaring using Map: "+ mp);
+
+let kv= a.map( (x)=> `${x}:${x*x}` );
+console.log("KV: "+ kv);
