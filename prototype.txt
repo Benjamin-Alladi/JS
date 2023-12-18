@@ -1,0 +1,20 @@
+Prototypes are the mechanism by which JavaScript objects inherit features from one another.
+
+Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+
+The property of an object that points to its prototype is not called prototype. Its name is not standard, but in practice all browsers use __proto__.
+
+When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case undefined is returned.
+
+This is an object called Object.prototype, and it is the most basic prototype, that all objects have by default. The prototype of Object.prototype is null, so it's at the end of the prototype chain.
+
+Setting Prototypes:
+
+There are various ways of setting an object's prototype in JavaScript, and here we'll describe two: Object.create() and constructors.
+
+1. Using Object.create:
+The Object.create() method creates a new object and allows you to specify an object that will be used as the new object's prototype.
+
+2. Using a constructor:
+In JavaScript, all functions have a property named prototype. When you call a function as a constructor, this property is set as the prototype of the newly constructed object (by convention, in the property named __proto__).
+So if we set the prototype of a constructor, we can ensure that all objects created with that constructor are given that prototype.
