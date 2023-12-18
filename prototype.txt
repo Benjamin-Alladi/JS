@@ -37,4 +37,33 @@ FC -> FC.prototype    newobj-> __proto__: FC.prototype
 4. let d= new Date()
 Date -> Date.prototype    newdate-> __proto__: Date.prototype
 
-Date objects, Array objects, and Person objects inherit from Object.prototype which is null.
+Date objects, Array objects, and Person objects inherit from Object.prototype.
+
+WKT, every obj has prototype and Object.prototype is also an object, so this Object.prototype also has proto:
+Object.prototype.__proto__ is null.
+
+
+let ob= {}
+undefined
+
+ob.__proto__
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+
+Object.prototype
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+
+Object.prototype.__proto__
+null
+ob.__proto__.__proto__
+null
+
+
+
+ob.__proto__.name="Benjamin"
+'Benjamin'
+
+ob.__proto__
+{name: 'Benjamin', constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, …}
+
+Object.prototype
+{name: 'Benjamin', constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, …}
