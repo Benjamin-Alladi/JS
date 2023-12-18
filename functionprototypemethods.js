@@ -1,5 +1,5 @@
 
-// FUNCTION PROTOTYPES:
+// FUNCTION PROTOTYPE METHODS:
 // 1. call()   2.apply()   3.bind()   4.toString()
 
 // The call() method of Function instances calls the function with a given: 1.this value  2. comma-separated arguments.

@@ -1,4 +1,4 @@
-// FUNCTION PROPERTIES:
+// FUNCTION PROTOTYPE PROPERTIES:
 // 1.func.name   2.func.displayName   3. func.arguments   4. func.length
 
 function func(a,b)
