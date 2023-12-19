@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+    
+
+    <div class="btnbox">
+        <button>Click</button>
+        <button>Click Me</button>
+        <button>Click</button>
+    </div>
+
+
+    <ul id="list">
+        <li id="laptop">Laptop</li>
+        <li id="mobile">Mobile</li>
+        <li id="bluetooth" class="n j">Bluetooth</li>
+    </ul>
+
+
+    <script>
+        // Delegation means to give control to someone.
+       //Event delegation is a technique in web development where instead of attaching an event handler to individual elements, you attach a single 
+       //event handler to a parent element that will handle events triggered by its child elements.
+       //This is a very efficient way to handle events, as it can save you from having to attach hundreds or even thousands of event handlers.
+
+       let ele= document.querySelector(".btnbox");
+
+       ele.addEventListener("click", (e)=>
+       {
+        console.log(e.target);
+         if(e.target== ele.firstElementChild){
+            document.body.style.backgroundColor="red";
+         }
+         else if(e.target== ele.lastElementChild){
+            document.body.style.backgroundColor="blue";
+         }
+         else
+         {
+            document.body.style.backgroundColor="green";
+         }
+       });
+
+
+
+       let t= document.querySelector("#list");
+    //    console.log(t);
+
+    t.addEventListener("click",(e)=>
+    {
+        console.log(e.target.id);
+
+        if(e.target.tagName=== "LI")
+        {
+            window.location.href="/"+e.target.id+".com";
+        }
+    });
+
+    </script>
+</body>
+</html>
