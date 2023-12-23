@@ -91,6 +91,38 @@
 
         let o = {};
         let a = [];
+
+        /*
+        a
+        []
+        Array.prototype
+        [constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]
+        a.__proto__
+        [constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]
+        a.__proto__===Array.prototype
+        true
+        a.prototype
+        undefined
+        a.prototype=== a.__proto__
+        false
+        a.__proto__.__proto__
+        {opv: 100, constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, …}
+        Object.prototype
+        {opv: 100, constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, …}
+        a.__proto__.__proto__===Object.prototype
+        true
+        Array.prototype.__proto__
+        {opv: 100, constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, …}
+
+        Array.prototype.__proto__===Object.prototype
+        true
+        Array.prototype.__proto__.__proto__
+        null
+        Object.prototype.__proto__
+        null
+        a.__proto__.__proto__.__proto__
+        null
+        */
     </script>
 </body>
 
