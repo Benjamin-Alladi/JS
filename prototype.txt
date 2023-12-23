@@ -30,8 +30,12 @@ Object -> Object.prototype   newobj-> __proto__: Object.prototype
 Array -> Array.prototype    arrayobj-> __proto__: Array.prototype
 
 
-3. When obj is created using Function Constructor, then:  Ex: function FC(p1,p2)   let ob= new FC(p1,p2)
-FC -> FC.prototype    newobj-> __proto__: FC.prototype
+3. function f(){}
+f.__proto__: Function.prototype  and a new prototype will be created for this function which is f.prototype
+When obj are created using this function:  let obj= new f(), then  obj.__proto__: f.prototype
+
+*** When obj is created using Function Constructor, then:  Ex: function FC(p1,p2)   let ob= new FC(p1,p2)
+CF -> CF.prototype    newobj-> __proto__: CF.prototype
 
 
 4. let d= new Date()

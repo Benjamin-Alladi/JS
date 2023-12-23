@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function f() {
+            this.a = 1;
+        }
+
+        f.prototype.pv = 10;
+        Object.prototype.opv = 100;
+
+        let ob = new f();
+        console.log(ob);
+        console.log(ob.pv);
+
+        console.log("ob's: ");
+        console.log(ob.__proto__);
+        console.log(ob.__proto__ === f.prototype);
+
+
+        /*
+        f {a: 1}
+        p.html:21 10
+        p.html:23 ob's: 
+        p.html:24 {pv: 10, constructor: ƒ}
+        p.html:25 true
+        f.prototype
+        {pv: 10, constructor: ƒ}
+        f.__proto__
+        ƒ () { [native code] }
+        Function.prototype
+        ƒ () { [native code] }
+        f.__proto__=== Function.prototype
+        true
+        f.__proto__=== f.prototype
+        false
+        */
+
+        /*
+        f.__proto__=== Function.prototype
+        true
+        Function.prototype.x= 1;
+        1
+        f.x
+        1
+        ob.x
+        undefined
+        f.__proto__.y= 2;
+        2
+
+        f.y
+        2
+        f.__proto__=== Function.prototype
+        true
+        */
+
+        /*
+        function nf(){}
+        nf.x
+        1
+        nf.y
+        2
+        nf.__proto__=== Function.prototype
+        true
+        nf.__proto__=== f.__proto__
+        true
+        nf.prototype
+        {constructor: ƒ}
+        f.prototype
+        {pv: 10, constructor: ƒ}
+        nf.prototype=== f.prototype
+        false
+        */
+
+        let o = {};
+        let a = [];
+    </script>
+</body>
+
+</html>
