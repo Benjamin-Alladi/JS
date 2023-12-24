@@ -15,7 +15,7 @@ let o = {
 };
 
 
-// Keys must be variables and order of the keys on the left side doesn't matter:
+// VARIABLES must be KEYS and order of the keys on the left side doesn't matter:
 let { fn, ln, mn, company, salary, location, details} = o;
 console.log(fn, ln, mn, location, details);
 
@@ -32,7 +32,7 @@ console.log(x, obj);
 console.log("Clone: "+ JSON.stringify({...obj}));
 
 
-//  Order of the keys on the left side doesn't matter and you can give NEW NAMES to the variables:
+//  VARIABLES must be KEYS, Order of the keys on the left side doesn't matter and you can give NEW NAMES to the variables:
 let {language, n:author, series:books}= {n: "Kyle Simpson", series: "YDJS", language: "JS"};
 // console.log(n, series, language);
 console.log(author, books, language);
