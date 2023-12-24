@@ -52,5 +52,5 @@ console.log(onlineSite); // "codesweetly.com"
 console.log(website); // "ReferenceError: website is not defined"
 
 Note: const { firstName: forename } = profile is equivalent to const forename = profile.firstName.
-
+https://www.freecodecamp.org/news/array-vs-object-destructuring-in-javascript/
 */
