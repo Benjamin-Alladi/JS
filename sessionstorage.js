@@ -3,7 +3,7 @@
 // The page session is valid only for that particular tab.
 // Closing a tab/window ends the session and clears objects in session storage.
 
-// Methods: setItem(K,V)  getItem(K)  removeItem(K)  clear()  length()  key(index).
+// Methods: setItem(K,V)  getItem(K)  removeItem(K)  key(index)  clear()  length.
 
 console.log(sessionStorage.length);
 
