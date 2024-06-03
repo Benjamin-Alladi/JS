@@ -28,10 +28,14 @@ for( let x of Object.keys(obj))  //only for ITERABLES.
 }
 
 
-let a=[1,2,"JS"];
+let a=[10,20,"JS"];
 
 for(let x of a)
 {
     console.log(x);
+}
+for(let x in a)
+{
+    console.log(x+" "+a[x]);
 }
 
