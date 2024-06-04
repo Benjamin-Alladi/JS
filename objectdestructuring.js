@@ -53,4 +53,9 @@ console.log(website); // "ReferenceError: website is not defined"
 
 Note: const { firstName: forename } = profile is equivalent to const forename = profile.firstName.
 https://www.freecodecamp.org/news/array-vs-object-destructuring-in-javascript/
+
+let ob={a:1, b:2,c:3}
+
+let {b:nb,c:nc,a:na,d:nd=100}=ob
+console.log(na,nb,nc,nd)
 */
