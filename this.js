@@ -41,8 +41,8 @@ function x() {
     // "use strict";
     // the below value depends on strict/non-strict mode
     console.log(this);
-    // in strict mode - refers to global window object
-    // in non-strict mode - undefined
+    // in no strict mode - refers to global window object
+    // in strict mode - undefined
 }
 x();
 
