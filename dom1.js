@@ -10,7 +10,7 @@ document.querySelector("#pg1");
 document.querySelector(".box");
 document.querySelector("div");
 
-// document.querySelectorAll() returns all the HTML element objects.
+// document.querySelectorAll() returns an NodeList containing all the HTML element objects.
 document.querySelectorAll("#pg1");
 document.querySelectorAll(".box");
 document.querySelectorAll("div");
@@ -32,8 +32,8 @@ ele.textContent;   // same as innerText. It PRESERVES extra-spacing, hidden elem
 // creating a new child Element:
 let child= document.createElement("h1");   // creating an HTML child element.
 let text=document.createTextNode(" <b>Hi</b> ");  // Creates a new Text node and specify the content.
-child.append(text);                        //append or prepend the the specified element to newly created child element.
-child.append(text);                        //append or prepend the Node to newly created child element
+child.append(text);                        //append  the the specified element to newly created child element.
+child.append(text);                        //append the Node to newly created child element
 parent.append(child);  parent.prepend(child);   // append the child element to the parent element.
 
 
