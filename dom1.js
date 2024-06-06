@@ -118,3 +118,74 @@ Common Types of Events
 */
 
 
+
+// The "parentNode" property in JavaScript is used to access the parent node of a given DOM node.  
+// Ex: ele.parentNode
+
+// The "childNodes" property in JavaScript returns a live NodeList of child nodes of a specified node. This includes all types of nodes—elements, text nodes, comments, etc. Unlike children, which only includes element nodes, childNodes gives you all child nodes, regardless of type. 
+// Ex: ele.childNodes
+
+// firstChild:
+// The firstChild property returns the first child node of a specified node, which can be any type of node, including:
+// Element nodes
+// Text nodes
+// Comment nodes
+
+// firstElementChild:
+// The firstElementChild property returns the first child element of a specified node, ignoring text nodes, comment nodes, and other non-element nodes. It only considers element nodes.
+
+// lastChild:
+// The lastChild property returns the last child node of a specified node, which can be any type of node (element nodes, text nodes, comment nodes, etc.).
+
+// lastElementChild:
+// The lastElementChild property returns the last child element of a specified node, ignoring text nodes, comment nodes, and other non-element nodes. It only considers element nodes.
+
+// previousSibling:
+// The "previousSibling" property returns the previous sibling node of a specified node, which can be any type of node (element nodes, text nodes, comment nodes, etc.).
+
+// previousElementSibling:
+// The "previousElementSibling" property returns the previous sibling element of a specified node, ignoring text nodes, comment nodes, and other non-element nodes. It only considers element 
+
+// nextSibling:
+// The "nextSibling" property returns the next sibling node of a specified node, which can be any type of node (element nodes, text nodes, comment nodes, etc.).
+
+// nextElementSibling:
+// The "nextElementSibling" property returns the next sibling element of a specified node, ignoring text nodes, comment nodes, and other non-element nodes. It only considers element nodes.
+
+// nodeName:
+// The "nodeName property" in the DOM represents the name of a node.
+// For an element node, nodeName returns the tag name in uppercase: DIV,P,BUTTON,FORM.
+// For a text node, nodeName returns "#text".
+// For a comment node, nodeName returns "#comment".
+
+// tagName:
+// In the DOM, the "tagName" property is used to get the tag name of an element node. It returns a string representing the tag name of the element, in uppercase. For textNode and commentNode it returns "null".
+
+// nodeValue:
+// The "nodeValue" property in the DOM is used to get or set the value(content) of a node, depending on its type.
+// For an element node, nodeValue is null.
+// For a text node, nodeValue represents the textual content of the text node.
+// For a comment node, nodeValue represents the content of the comment.
+
+// className:
+// The "className" property in the DOM is used to get or set the value of the class attribute of an element. It allows you to access and modify the CSS class(es) applied to an element.
+
+// classList():
+// The classList property in the DOM provides an interface to manipulate the classes of an element. It's a read-only property that returns a live DOMTokenList collection of the class attributes of the element.
+// Methods of classList: add(className), contains(className) ,remove(className), replace(oldClassName, newClassName), toggle(className),
+// item(index): Returns the class name at the specified index in the collection.
+
+// setAttribute(): element.setAttribute(attributeName, attributeValue);  divElement.setAttribute('class', 'new-class'); 
+// divElement.setAttribute('style', 'color: blue; background-color: yellow;');
+
+// getAttribute(): element.getAttribute(attributeName);
+// divElement.getAttribute('style');
+
+// hasAttribute(): element.hasAttribute(attributeName).
+// If you want to check if an HTML element has a specific attribute, you can use the hasAttribute() method.
+
+// removeAttribute(): element.removeAttribute(attributeName).
+// The removeAttribute() method is used to remove a specified attribute from an HTML element.
+
+// ele.style.cssText: The cssText property in JavaScript is used to get or set the entire inline style declaration of an element as a string.
+// element.style.cssText = 'color: blue; background-color: yellow;'.
